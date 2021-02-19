@@ -22,7 +22,7 @@
 
 static constexpr auto STATUS_SERVER_NAME = "OTG-BR";
 static constexpr auto STATUS_SERVER_VERSION = "TFS 1.3";
-static constexpr auto STATUS_SERVER_DEVELOPERS = "OTG-BR, Johncore, Marson Schneider, Erick Nunes, Leonardo Pereira, OTXServer (Mattyx Gomez), Mark Samman and The Forgotten Server Developers";
+static constexpr auto STATUS_SERVER_DEVELOPERS = "OTG-BR, Johncore, Marson Schneider, Erick Nunes, Leonardo Pereira, OTServBR, OTXServer (Mattyx Gomez), Mark Samman and The Forgotten Server Developers";
 
 static constexpr auto AUTHENTICATOR_DIGITS = 6U;
 static constexpr auto AUTHENTICATOR_PERIOD = 30U;
