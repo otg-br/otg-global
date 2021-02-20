@@ -483,6 +483,7 @@ void Player::setTraining(bool value) {
 			it.second->notifyStatusChange(this, value ? VIPSTATUS_TRAINING : VIPSTATUS_ONLINE, false);
 		}
 	}
+	setExerciseTraining(value);
 }
 
 void Player::addSkillAdvance(skills_t skill, uint64_t count)
@@ -1778,7 +1779,7 @@ void Player::onThink(uint32_t interval)
 		addMessageBuffer();
 	}
 
-	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT) && !isAccessPlayer()) {
+	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT) && !isAccessPlayer() && !isExerciseTraining()) {
 		idleTime += interval;
 		const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);
 		if (idleTime > (kickAfterMinutes * 60000) + 60000) {
