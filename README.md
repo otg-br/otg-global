@@ -2,6 +2,11 @@
 # OTG-BR - [![Windows](https://ci.appveyor.com/api/projects/status/y69059itp38j0u65?svg=true)](https://ci.appveyor.com/project/Johncorex/otg-global-n2g4x)  ![Linux](https://github.com/Johncorex/OTG-Premium-Version/workflows/CI/badge.svg)
   [![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?label=discord)](https://discord.gg/xbKZHDg)
 
+
+**OTG-BR Global** server is a free and open-source MMORPG server emulator written in C++. It is a fork of the [Forgotten Server](https://github.com/otland/forgottenserver "Forgotten Server") project. To connect to the server and to take a stable experience, you can use our [own client](https://github.com/otg-br/clients "own client") and if you want to edit something, check our [customized tools](https://github.com/otg-br/tools "customized tools").
+
+You are subject to our code of conduct, read at this link.
+
 ![enter image description here](https://i.postimg.cc/TwPWZ9Qr/pp-menor.jpg)
 ### Getting Started:
 * [Compiling](https://github.com/otland/forgottenserver/wiki/Compiling)
@@ -43,5 +48,5 @@ Usamos o [issue tracker no GitHub](https://github.com/Johncorex/OTG-Premium-Vers
 ### Partners  (Parceiros)
 
 ![enter image description here](https://i.postimg.cc/5NBbfPFP/logo2.png)
-[Link Webserv Parceiro](https://webserv.com.br/)
+
 
