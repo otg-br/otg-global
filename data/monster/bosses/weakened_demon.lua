@@ -1,29 +1,29 @@
-local mType = Game.createMonsterType("Spider Queen")
+local mType = Game.createMonsterType("Weakened Demon")
 local monster = {}
 
-monster.description = "a spider queen"
-monster.experience = 120
+monster.description = "a weakened demon"
+monster.experience = 0
 monster.outfit = {
-	lookType = 219,
-	lookHead = 0,
+	lookType = 12,
+	lookHead = 92,
 	lookBody = 0,
-	lookLegs = 0,
-	lookFeet = 0,
+	lookLegs = 95,
+	lookFeet = 100,
 	lookAddons = 0,
 	lookMount = 0
 }
 
-monster.health = 10000
-monster.maxHealth = 10000
-monster.race = "venom"
-monster.corpse = 6060
-monster.speed = 280
+monster.health = 5
+monster.maxHealth = 5
+monster.race = "blood"
+monster.corpse = 0
+monster.speed = 400
 monster.manaCost = 0
 monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
-	chance = 8
+	chance = 15
 }
 
 monster.strategiesTarget = {
@@ -39,18 +39,18 @@ monster.flags = {
 	hostile = true,
 	convinceable = false,
 	pushable = false,
-	rewardBoss = false,
+	rewardBoss = true,
 	illusionable = false,
 	canPushItems = true,
-	canPushCreatures = false,
-	staticAttackChance = 90,
+	canPushCreatures = true,
+	staticAttackChance = 85,
 	targetDistance = 1,
 	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
-	canWalkOnEnergy = false,
-	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnEnergy = true,
+	canWalkOnFire = true,
+	canWalkOnPoison = true,
 	pet = false
 }
 
@@ -62,36 +62,37 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{text = "UH?", yell = true}
 }
 
 monster.loot = {
 }
 
 monster.attacks = {
-	{name = "spider queen wrap", interval = 5000, chance = 100, target = true, range = 1}
+	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = 0}
 }
 
 monster.defenses = {
-	defense = 5,
-	armor = 10,
-	{name ="speed", interval = 1000, chance = 10, speedChange = 480, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000}
+	defense = 2,
+	armor = 2,
+	{name ="invisible", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE}
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 100},
-	{type = COMBAT_ENERGYDAMAGE, percent = 100},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 100},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
-	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 100},
-	{type = COMBAT_HOLYDAMAGE , percent = 100},
-	{type = COMBAT_DEATHDAMAGE , percent = 100}
+	{type = COMBAT_DROWNDAMAGE, percent = 0},
+	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 
 monster.immunities = {
-	{type = "paralyze", condition = false},
+	{type = "paralyze", condition = true},
 	{type = "outfit", condition = false},
 	{type = "invisible", condition = false},
 	{type = "bleed", condition = false}
@@ -101,9 +102,6 @@ mType.onThink = function(monster, interval)
 end
 
 mType.onAppear = function(monster, creature)
-	if monster:getType():isRewardBoss() then
-		monster:setReward(true)
-	end
 end
 
 mType.onDisappear = function(monster, creature)

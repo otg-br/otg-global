@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Furious Orc Berserker")
+local mType = Game.createMonsterType("Running Elite Orc Guard")
 local monster = {}
 
-monster.description = "a furious orc berserker"
+monster.description = "a running elite orc guard"
 monster.experience = 0
 monster.outfit = {
-	lookType = 8,
+	lookType = 2,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,17 +13,17 @@ monster.outfit = {
 	lookMount = 0
 }
 
-monster.health = 210
-monster.maxHealth = 210
+monster.health = 950
+monster.maxHealth = 950
 monster.race = "blood"
-monster.corpse = 5980
-monster.speed = 250
-monster.manaCost = 220
+monster.corpse = 6008
+monster.speed = 234
+monster.manaCost = 0
 monster.maxSummons = 0
 
 monster.changeTarget = {
-	interval = 5000,
-	chance = 20
+	interval = 4000,
+	chance = 10
 }
 
 monster.strategiesTarget = {
@@ -33,20 +33,20 @@ monster.strategiesTarget = {
 monster.flags = {
 	summonable = false,
 	attackable = true,
-	hostile = true,
+	hostile = false,
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
-	canPushCreatures = false,
+	canPushItems = true,
+	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 0,
+	runHealth = 950,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
-	canWalkOnFire = false,
+	canWalkOnFire = true,
 	canWalkOnPoison = false,
 	pet = false
 }
@@ -59,7 +59,7 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{text = "KRAK ORRRRRRK!", yell = false}
+	{text = "UAAAAH FETCHI!", yell = false}
 }
 
 monster.loot = {}
@@ -69,8 +69,8 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 2,
-	armor = 1
+	defense = 35,
+	armor = 35
 }
 
 monster.elements = {
