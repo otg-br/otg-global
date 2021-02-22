@@ -242,6 +242,7 @@
     <ClCompile Include="..\src\vocation.cpp" />
     <ClCompile Include="..\src\waitlist.cpp" />
     <ClCompile Include="..\src\weapons.cpp" />
+	<ClCompile Include="..\src\webhook.cpp" />
     <ClCompile Include="..\src\wildcardtree.cpp" />
     <ClCompile Include="..\src\xtea.cpp" />
   </ItemGroup>
@@ -338,6 +339,7 @@
     <ClInclude Include="..\src\vocation.h" />
     <ClInclude Include="..\src\waitlist.h" />
     <ClInclude Include="..\src\weapons.h" />
+	<ClInclude Include="..\src\webhook.h" />
     <ClInclude Include="..\src\wildcardtree.h" />
     <ClInclude Include="..\src\xtea.h" />
   </ItemGroup>
