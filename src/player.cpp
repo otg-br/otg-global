@@ -3862,6 +3862,10 @@ void Player::onAddCombatCondition(ConditionType_t type)
 		case CONDITION_DRUNK:
 			sendTextMessage(MESSAGE_FAILURE, "You are drunk.");
 			break;
+        
+		case CONDITION_ROOTED:
+			sendTextMessage(MESSAGE_FAILURE, "You are rooted.");
+			break;
 
 		case CONDITION_CURSED:
 			sendTextMessage(MESSAGE_FAILURE, "You are cursed.");
