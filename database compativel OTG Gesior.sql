@@ -127,32 +127,6 @@ CREATE TABLE `announcements` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `boosted_creature`
---
-
-CREATE TABLE `boosted_creature` (
-  `looktype` int NOT NULL DEFAULT '136',
-  `lookfeet` int NOT NULL DEFAULT '0',
-  `looklegs` int NOT NULL DEFAULT '0',
-  `lookhead` int NOT NULL DEFAULT '0',
-  `lookbody` int NOT NULL DEFAULT '0',
-  `lookaddons` int NOT NULL DEFAULT '0',
-  `lookmount` int DEFAULT '0',
-  `date` varchar(250) NOT NULL DEFAULT '',
-  `boostname` text,
-  `raceid` varchar(250) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Extraindo dados da tabela `boosted_creature`
---
-
-INSERT INTO `boosted_creature` (`looktype`, `lookfeet`, `looklegs`, `lookhead`, `lookbody`, `lookaddons`, `lookmount`, `date`, `boostname`, `raceid`) VALUES
-(136, 0, 0, 0, 0, 0, 0, '0', 'default', '0');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `coins_transactions`
 --
 
@@ -1168,12 +1142,6 @@ ALTER TABLE `account_viplist`
   ADD UNIQUE KEY `account_viplist_unique` (`account_id`,`player_id`),
   ADD KEY `account_id` (`account_id`),
   ADD KEY `player_id` (`player_id`);
-
---
--- Índices para tabela `boosted_creature`
---
-ALTER TABLE `boosted_creature`
-  ADD PRIMARY KEY (`date`);
 
 --
 -- Índices para tabela `coins_transactions`

@@ -153,7 +153,7 @@ local node1 = keywordHandler:addKeyword({'promot'}, StdModule.say, {npcHandler =
 	node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Alright then, come back when you are ready.', reset = true})
 -- Basic
 keywordHandler:addKeyword({'eremo'}, StdModule.say, {npcHandler = npcHandler, text = 'It is said that he lives on a small island near Edron. Maybe the people there know more about him.'})
-keywordHandler:addKeyword({'otg'}, StdModule.say, {npcHandler = npcHandler, text = 'Awesome! Please pay a visit to www.otg-br.com!'})
+keywordHandler:addKeyword({'otbr'}, StdModule.say, {npcHandler = npcHandler, text = 'Awesome! Please pay a visit to www.otserv.com.br!'})
 keywordHandler:addKeyword({'baah'}, StdModule.say, {npcHandler = npcHandler, text = 'Baah is awesome dude that rewrote my outfit script.'})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = 'I am your sovereign, King Tibianus III, and it\'s my duty to uphold {justice} and provide guidance for my subjects.'})
 keywordHandler:addKeyword({'justice'}, StdModule.say, {npcHandler = npcHandler, text = 'I try my best to be just and fair to our citizens. The army and the {TBI} are a great help in fulfilling this duty.'})
