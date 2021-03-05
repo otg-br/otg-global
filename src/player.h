@@ -1727,7 +1727,25 @@ class Player final : public Creature, public Cylinder
  				client->sendUpdateLootTracker(item);
  			}
  		}
-
+		
+		void createLeaderTeamFinder(NetworkMessage &msg)
+ 		{
+  			if (client) {
+ 				client->createLeaderTeamFinder(msg);
+ 			}
+ 		}
+   		void sendLeaderTeamFinder(bool reset)
+ 		{
+  			if (client) {
+ 				client->sendLeaderTeamFinder(reset);
+ 			}
+ 		}
+   		void sendTeamFinderList()
+ 		{
+  			if (client) {
+ 				client->sendTeamFinderList();
+ 			}
+ 		}
 		uint32_t getCharmPoints() {
 			return charmPoints;
 		}

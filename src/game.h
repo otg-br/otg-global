@@ -113,7 +113,16 @@ class Game
 		WorldType_t getWorldType() const {
 			return worldType;
 		}
-
+		
+		std::map<uint32_t, TeamFinder*> getTeamFinderList() const {
+			return teamFinderMap;
+		}
+		void registerTeamFinderAssemble(uint32_t leaderGuid, TeamFinder* teamFinder) {
+			teamFinderMap[leaderGuid] = teamFinder;
+		}
+		void removeTeamFinderListed(uint32_t leaderGuid) {
+			teamFinderMap.erase(leaderGuid);
+		}
 		// Event schedule xml load
 		bool loadScheduleEventFromXml();
 
@@ -685,6 +694,8 @@ class Game
 
 		std::map<uint32_t, Npc*> npcs;
 		std::map<uint32_t, Monster*> monsters;
+        
+		std::map<uint32_t, TeamFinder*> teamFinderMap; // [leaderGUID] = TeamFinder*
 
 		//list of items that are in trading state, mapped to the player
 		std::map<Item*, uint32_t> tradeItems;
