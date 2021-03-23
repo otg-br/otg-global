@@ -484,6 +484,7 @@ CREATE TABLE `players` (
   `lookmountlegs` tinyint UNSIGNED NOT NULL DEFAULT '0',
   `lookfamiliarstype` int UNSIGNED NOT NULL DEFAULT '0',
   `isreward` tinyint(1) NOT NULL DEFAULT '1',
+  `istutorial` tinyint(1) NOT NULL DEFAULT '0',
   `cast` tinyint(1) NOT NULL DEFAULT '0',
   `comment` text,
   `create_date` int NOT NULL DEFAULT '0',
@@ -818,11 +819,7 @@ CREATE TABLE `server_config` (
 -- Extraindo dados da tabela `server_config`
 --
 
-INSERT INTO `server_config` (`config`, `value`) VALUES
-('db_version', '16'),
-('motd_hash', ''),
-('motd_num', '0'),
-('players_record', '0');
+INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '17'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
 
 -- --------------------------------------------------------
 
